@@ -1,0 +1,23 @@
+def characters(a,b):
+    if(len(a)<2):
+        return False
+    else:
+        for i in range(len(a)-1):
+            if(a[i]!=b[i]):
+                first=a[i]
+                last=a[i+1]
+                a[i]=last 
+                a[i+1]=first
+                return a==b 
+
+list_a=list(input())
+list_b=list(input())
+
+if(list_a==list_b):
+    print("Yes")
+else:
+    result=characters(list_a,list_b)
+    if(result):
+        print("Yes")
+    else:
+        print("No")   
