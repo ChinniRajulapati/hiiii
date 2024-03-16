@@ -1,0 +1,12 @@
+m,n=input().split(" ")
+m,n=int(m),int(n)
+full_list=[]
+for i in range(m):
+    full_list.append(list(map(int,input().split(" "))))
+count=0
+for i in range(len(full_list)):
+    if i==0 or i==len(full_list)-1:
+        count+=sum(full_list[i])
+    else:
+        count+=full_list[i][0]+full_list[i][-1]
+print(count)        
